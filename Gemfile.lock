@@ -3,6 +3,10 @@ GEM
   specs:
     jruby-jars (1.7.10)
     jruby-rack (1.1.13.3)
+    puma (2.7.1)
+      rack (>= 1.1, < 2.0)
+    puma (2.7.1-java)
+      rack (>= 1.1, < 2.0)
     rack (1.4.1)
     rack-protection (1.5.2)
       rack
@@ -24,6 +28,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  puma
   rack
   rake
   sinatra
