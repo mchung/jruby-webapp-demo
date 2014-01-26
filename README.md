@@ -35,4 +35,5 @@ PUMA_ARGS="-t 32:64 -e production -p 8080" java -server -jar app-full.war -S rak
 ## Rake tasks
 ```
 java -jar app-full.war -S rake print
+java -jar app-full.war -S rake pry
 ```

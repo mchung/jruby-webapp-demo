@@ -10,3 +10,5 @@ group :deployment do
 end
 
 gem "sinatra"
+
+gem 'pry'

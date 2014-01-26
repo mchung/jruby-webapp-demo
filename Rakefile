@@ -18,3 +18,9 @@ task "puma" do
   runtime = ENV["PUMA_ARGS"].split(" ") || ["-t", "32:64"]
   Puma::CLI.new(runtime).run
 end
+
+desc "Run pry"
+task "pry" do
+  require "pry"
+  Pry.start
+end
