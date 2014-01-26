@@ -8,7 +8,12 @@ Warbler::Config.new do |config|
   # - gemjar: package the gem repository in a jar file in WEB-INF/lib
   # - executable: embed a web server and make the war executable
   # - compiled: compile .rb files to .class files
-  config.features = %w(compiled runnable)
+
+  # For Jetty
+  # config.features = %w(compiled executable)
+
+  # For Puma
+  # config.features = %w(compiled runnable)
 
   # Application directories to be included in the webapp.
   # config.dirs = %w(app config db lib log script vendor tmp)
@@ -125,7 +130,7 @@ Warbler::Config.new do |config|
   # * <tt>winstone</tt> (default) - Winstone 0.9.10 from sourceforge
   # * <tt>jenkins-ci.winstone</tt> - Improved Winstone from Jenkins CI
   # * <tt>jetty</tt> - Embedded Jetty from Eclipse
-  # config.webserver = "jetty"
+  config.webserver = "jetty"
 
 
   # Value of RAILS_ENV for the webapp -- default as shown below
@@ -150,7 +155,7 @@ Warbler::Config.new do |config|
   # config.webxml.rackup = %{require './lib/demo'; run Rack::Adapter::Camping.new(Demo)}
   # config.webxml.rackup = require 'cgi' && CGI::escapeHTML(File.read("config.ru"))
 
-  # config.webxml.jruby.rack.logging = "stdout"
+  config.webxml.jruby.rack.logging = "stdout"
 
   # Control the pool of Rails runtimes. Leaving unspecified means
   # the pool will grow as needed to service requests. It is recommended
